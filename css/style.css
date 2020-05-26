@@ -121,11 +121,22 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .general-nav:hover,
 .general-nav:focus,
 .number-nav:hover,
 .number-nav:focus {
   color: var(--acent-text-color);
+}
+.bef::before {
+  content: '';
+  width: 16px;
+  height: 11.2px;
+  margin-right: 10px;
+  background-color: red;
+  background-image: url(../images/mail.svg);
+
+  background-size: contain;
 }
 
 .list-number {
@@ -173,8 +184,6 @@ img {
 .hero {
   background-color: rgb(70, 70, 70);
   text-align: center;
-
-  /* justify-content: center; */
 
   margin-left: auto;
   margin-right: auto;
