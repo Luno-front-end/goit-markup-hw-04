@@ -93,12 +93,43 @@ img {
   display: block;
 }
 
+.link-block::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bg-none-light);
+  border-radius: 4px;
+}
+.icon-Satellite::before {
+  background-image: url(../images/Satellite.svg);
+}
+.icon-Satellite:hover::before {
+  background-color: var(--acent-text-color);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-clock:hover::before {
+  background-color: var(--acent-text-color);
+}
+.icon-pc::before {
+  background-image: url(../images/pc.svg);
+}
+.icon-pc:hover::before {
+  background-color: var(--acent-text-color);
+}
+.icon-astronaut::before {
+  background-image: url(../images/Astronaut.svg);
+}
+.icon-astronaut:hover::before {
+  background-color: var(--acent-text-color);
+}
+
 /* header */
 /* nav */
-
-.image-header {
-  margin-right: 10px;
-}
 
 .general-nav {
   color: var(--primary-text-color);
@@ -114,6 +145,7 @@ img {
   letter-spacing: 0.02em;
 }
 .number-nav {
+  display: flex;
   color: var(--connection);
 
   font-weight: 500;
@@ -128,15 +160,23 @@ img {
 .number-nav:focus {
   color: var(--acent-text-color);
 }
-.bef::before {
+.number-nav::before {
   content: '';
-  width: 16px;
-  height: 11.2px;
-  margin-right: 10px;
-  background-color: red;
-  background-image: url(../images/mail.svg);
 
-  background-size: contain;
+  margin-right: 10px;
+}
+
+.mail-icon::before {
+  /* align-items: center; */
+
+  width: 16px;
+  height: 11px;
+  background-image: url(../images/mail.svg);
+}
+.number-icon::before {
+  width: 10px;
+  height: 14.94px;
+  background-image: url(../images/phone.svg);
 }
 
 .list-number {
@@ -182,7 +222,14 @@ img {
 /* general */
 
 .hero {
-  background-color: rgb(70, 70, 70);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Header.jpg);
+  /* background-color: rgb(70, 70, 70); */
+  max-width: 1600px;
   text-align: center;
 
   margin-left: auto;
@@ -200,8 +247,7 @@ img {
 }
 .title-general {
   color: var(--primery-text-white);
-  /* фон поставив щоб було видно текст */
-  background-color: var(--bg-white-text);
+
   margin-top: 0;
   margin-bottom: 38px;
   margin-left: auto;
@@ -257,7 +303,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-.bg-img {
+/* .bg-img {
   background-color: var(--bg-none-light);
 
   display: flex;
@@ -270,7 +316,7 @@ img {
 
 .bg-img:hover {
   background-color: var(--acent-text-color);
-}
+} */
 
 .about-us {
   width: calc((100% - 90px) / 4);

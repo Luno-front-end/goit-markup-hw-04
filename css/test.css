@@ -129,11 +129,12 @@ img {
   color: var(--acent-text-color);
 }
 .number-nav::before {
-  content: 'ввв';
+  display: inline-block;
+  content: '';
   width: 16px;
   height: 11.2px;
   margin-right: 10px;
-  background-color: red;
+  /* background-color: red; */
   background-image: url(../images/mail.svg);
 
   background-size: contain;
