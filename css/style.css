@@ -76,11 +76,24 @@ img {
   line-height: 1.9;
   letter-spacing: 0.06em;
 
-  display: inline-block;
+  display: flex;
   border-radius: 4px;
-  padding: 10px 45px;
+  padding: 10px 28px;
   text-align: center;
   min-width: 200px;
+}
+
+.i::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-left: 10px;
+
+  background-image: url(../images/icon-send.svg);
 }
 .container {
   margin: 0 auto;
@@ -103,29 +116,26 @@ img {
   background-color: var(--bg-none-light);
   border-radius: 4px;
 }
-.icon-Satellite::before {
-  background-image: url(../images/Satellite.svg);
+.icon-satellite::before {
+  background-image: url(../images/satellite.svg);
 }
-.icon-Satellite:hover::before {
-  background-color: var(--acent-text-color);
-}
+
 .icon-clock::before {
   background-image: url(../images/clock.svg);
 }
-.icon-clock:hover::before {
-  background-color: var(--acent-text-color);
-}
+
 .icon-pc::before {
   background-image: url(../images/pc.svg);
 }
-.icon-pc:hover::before {
-  background-color: var(--acent-text-color);
-}
+
 .icon-astronaut::before {
   background-image: url(../images/Astronaut.svg);
 }
-.icon-astronaut:hover::before {
-  background-color: var(--acent-text-color);
+
+.page-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
 }
 
 /* header */
@@ -146,6 +156,7 @@ img {
 }
 .number-nav {
   display: flex;
+  align-items: center;
   color: var(--connection);
 
   font-weight: 500;
@@ -159,25 +170,37 @@ img {
 .number-nav:hover,
 .number-nav:focus {
   color: var(--acent-text-color);
+  --color5: var(--acent-text-color);
+  --color2: var(--acent-text-color);
 }
-.number-nav::before {
+
+.phone-icon {
+  fill: currentColor;
+  width: 10px;
+  height: 14.94px;
+
+  margin-right: 10px;
+}
+.mail-icon {
+  fill: currentColor;
+  width: 16px;
+  height: 11.2px;
+
+  margin-right: 10px;
+}
+
+/* .number-nav::before {
   content: '';
 
   margin-right: 10px;
 }
 
 .mail-icon::before {
-  /* align-items: center; */
 
-  width: 16px;
-  height: 11px;
+
   background-image: url(../images/mail.svg);
 }
-.number-icon::before {
-  width: 10px;
-  height: 14.94px;
-  background-image: url(../images/phone.svg);
-}
+*/
 
 .list-number {
   display: flex;
@@ -303,21 +326,6 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-/* .bg-img {
-  background-color: var(--bg-none-light);
-
-  display: flex;
-  justify-content: center;
-
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-}
-
-.bg-img:hover {
-  background-color: var(--acent-text-color);
-} */
-
 .about-us {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -354,8 +362,7 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
-/* .work-box {
-} */
+
 .work-card {
   background: var(--primery-text-white);
   height: 422px;
@@ -363,9 +370,8 @@ img {
   padding-bottom: 24px;
 
   border-radius: 4px;
-
-  /* width: 278px;
-  height: 422px; */
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .work-calc {
   width: calc((100% - 60px) / 3);
@@ -421,11 +427,122 @@ img {
 .section {
   background-color: var(--bg-none-light);
 }
+.social-box {
+  display: flex;
+  align-items: center;
+  /* padding-left: 12px; */
+  background-color: var(--primery-text-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.instagram {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.twitter {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.facebook {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.linkedin {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-box:hover {
+  background-color: var(--acent-text-color);
+  --color3: var(--primery-text-white);
+  --color4: var(--primery-text-white);
+}
 
 /* Company  */
 .section-four .container {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.company-border {
+  display: flex;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.company-border:hover {
+  border-color: var(--acent-text-color);
+  --color3: var(--acent-text-color);
+}
+.logo-one {
+  fill: currentColor;
+  width: 44.27px;
+  height: 49.23px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-two {
+  fill: currentColor;
+
+  width: 40px;
+  height: 52px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-three {
+  fill: currentColor;
+
+  width: 41px;
+  height: 42.6px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-four {
+  fill: currentColor;
+
+  width: 79.66px;
+  height: 42.02px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-five {
+  fill: currentColor;
+
+  width: 59px;
+  height: 47px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo-six {
+  fill: currentColor;
+
+  width: 88.48px;
+  height: 45.44px;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .company {
@@ -455,7 +572,7 @@ img {
 }
 
 /* footer */
-/* Зробив background підвала для того щоб бачити текст */
+
 .bg-footer {
   background-color: var(--bg-footer);
 }
@@ -505,6 +622,56 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+}
+.fsocial-box {
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+}
+.fsocial-box:hover {
+  background-color: var(--acent-text-color);
+}
+
+.instagram-two {
+  fill: currentColor;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.twitter-two {
+  fill: currentColor;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.facebook-two {
+  fill: currentColor;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.linkedin-two {
+  fill: currentColor;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .copyright {
