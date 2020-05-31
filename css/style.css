@@ -129,7 +129,7 @@ img {
 }
 
 .icon-astronaut::before {
-  background-image: url(../images/Astronaut.svg);
+  background-image: url(../images/astronaut.svg);
 }
 
 .page-header {
